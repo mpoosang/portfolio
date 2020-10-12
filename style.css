@@ -1,0 +1,64 @@
+
+a {
+    text-decoration: none;
+}
+
+#header-wrap {
+    text-align: center;
+}
+
+/* .nav-center {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+} */
+
+.nav-item {
+    font-size: 20px;
+}
+
+nav li {
+    display: inline;
+    padding: 20px 40px;
+    margin: 0 auto;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: #000000;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 85px;
+}
+
+.city {
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+}
+
+/* .centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+}     */
+
+.right-aligned {
+    position: absolute;
+    top: 40px;
+    right: 230px;
+}
+
+/* .canoe {
+    width: 75%;
+    height: auto;
+} */
+
+h2 {
+    text-transform: uppercase;
+}
