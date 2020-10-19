@@ -1,4 +1,5 @@
 
+/***** General Styles *****/
 body {
     background-color: #D8E1E9;
   }
@@ -7,6 +8,25 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-family: 'Assistant', sans-serif;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 85px;
+    margin-bottom: 0px;
+}
+
+.city {
+    font-family: 'Oswald', sans-serif;
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+
+/***** Header/Nav *****/
 #header-wrap {
     text-align: center;
 }
@@ -47,18 +67,6 @@ nav li a:hover {
     color: #000000;
 }
 
-h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    font-size: 85px;
-    margin-bottom: 0px;
-}
-
-.city {
-    font-family: 'Oswald', sans-serif;
-    font-size: 35px;
-    margin-top: 10px;
-}
 
 .right-aligned {
     position: absolute;
@@ -92,9 +100,6 @@ section a {
     color: #000000;
 }
 
-p {
-    font-family: 'Assistant', sans-serif;
-}
 
 .name {
     margin-bottom: 5px;
@@ -108,4 +113,39 @@ p {
 
 .github:hover, .linkedin:hover {
     font-weight: bold;
+}
+
+
+/***** Groups & Items  (Mobile First) *****/
+.wrapper {
+    width: 100%;
+  }
+  
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    flex: 1;
+    margin: 10px;
+}
+
+.item-double {
+    flex: 2;
+    margin: 10px;
+}
+  
+
+/***** Groups & Items  (Desktop) *****/
+
+@media all and (min-width: 800px) {
+    .wrapper {
+        width: 80%;
+        margin: auto;
+    }
+
+    .group {
+        flex-direction: row;
+    }
 }
