@@ -1,7 +1,9 @@
 
 /***** General Styles *****/
+
 body {
     background-color: #D8E1E9;
+    margin: 0px;
   }
 
 a {
@@ -15,7 +17,7 @@ p {
 h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    font-size: 85px;
+    font-size: 25px;
     margin-bottom: 0px;
 }
 
@@ -26,25 +28,41 @@ h1 {
 }
 
 
-/***** Header/Nav *****/
-#header-wrap {
-    text-align: center;
+/***** Navigation *****/
+
+header nav {
+    /* the default is block and we change to flex */
+    display: flex;
+    /* centers an element defined as `display: flex` */
+    justify-content: center;
 }
+
+header nav ul {
+    /* the default is block and we change to flex */
+    display: flex;
+    /* this removes the default padding to the left of the
+     unordered list. */
+    padding-left: 0;
+    list-style: none;
+}
+
+header nav ul a {
+    color: #ffffff;
+    text-decoration: none;
+    /* creates a visual gap between the navigation links */
+    margin: 0 40px 0 0;
+}
+
+header nav ul li:last-child a {
+    /* removes the margin to the right of the last anchor tag 
+       so that the nav appears centered. */
+    margin-right: 0;
+  }
 
 .nav-item {
     font-size: 20px;
     letter-spacing: 1px;
     text-transform: lowercase;
-}
-
-nav li {
-    display: inline;
-    padding: 25px 40px;
-    margin: 0 auto;
-}
-
-nav li a {
-    color: #ffffff;
 }
 
 nav li a:hover {
@@ -59,20 +77,37 @@ nav li a:hover {
     width: 100%;
     height: 60px;
     background-color: #000000;
-  }
+}
+
+
+
+
+/* .right-aligned {
+    position: absolute;
+    top: 40px;
+    right: 230px;
+} */
+
 
 .container {
     position: relative;
+}
+
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     color: #000000;
 }
 
 
-.right-aligned {
-    position: absolute;
-    top: 40px;
-    right: 230px;
-}
+
+
+
+
+
 
 .canoe {
     width: 100%;
@@ -87,9 +122,25 @@ h2 {
     margin-bottom: 0px;
 }
 
-.sections {
-    text-align: center;
+main {
+    padding: 15px 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+footer {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* .sections {
     padding: 0 60px;
+} */
+
+.portpara {
+    width: 350px;
 }
 
 ol {
@@ -133,19 +184,78 @@ section a {
 
 .item-double {
     flex: 2;
-    margin: 10px;
+    /* margin: 10px; */
 }
   
 
 /***** Groups & Items  (Desktop) *****/
 
-@media all and (min-width: 800px) {
+/* When a web browser is larger than 600px,
+   apply these rules */
+@media all and (min-width: 600px) {
+
+    h1 {
+        font-size: 75px;
+    }
+
+    header {
+        /* change the default setting from block to flex */
+        display: flex;
+        /* push the items to the far sides of the 
+        browser with space between them. */
+        justify-content: space-between;
+        /* Add 0px padding top & bottom and 30px left & right. */ 
+        padding: 0 30px;  
+    }
+
     .wrapper {
         width: 80%;
         margin: auto;
     }
 
     .group {
+        display: flex;
         flex-direction: row;
     }
+
 }
+
+
+/***** Contact Form Design *****/
+
+form {
+    /* Fixes small sizing issue on the right */
+    padding-right: 8px;
+  }
+  
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, 
+form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form textarea {
+    height: 160px;
+}
+
+/* ---  Contact Form Design --- */
+
+/* form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #000000;
+    font-family: arial;
+  }
+
+form input, form textarea {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+} */
