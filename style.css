@@ -1,13 +1,21 @@
 /***** General Styles *****/
 
 body {
-    /* margin: 0px; */
+    margin: 0;
     background-color: #D8E1E9;
     font-family: 'Assistant', sans-serif;
 }
 
 header {
-    margin-bottom: 20px;
+    background-color: #000000;
+}
+
+header h1 {
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0;
+    padding-top: 25px;
 }
 
 a {
@@ -16,14 +24,18 @@ a {
     a:active ; */
 }
 
+a:visited {
+    color: #000000;
+} 
+
 a:hover {
     text-decoration: underline;
     /* font-weight: bold; */
 }
 
-a:visited {
-    color: #000000;
-} 
+.email, .linkedin, .github {
+    font-weight: bold;
+}
 
 footer {
     text-align: center;
@@ -35,8 +47,8 @@ footer {
 
 header nav {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    background-color: #000000;
 }
 
 header nav ul {
@@ -59,7 +71,7 @@ header nav ul a {
     color: #ffffff;
     text-decoration: none;
     /* creates a visual gap between the navigation links */
-    margin: 0 40px 0 0;
+    padding: 0 20px 0 0;
 }
 
 header nav ul li:last-child a {
@@ -68,9 +80,14 @@ header nav ul li:last-child a {
     margin-right: 0;
 }
 
+header nav ul li a:visited {
+    color: #ffffff;
+}
+
 header nav ul li a:hover {
     color: #EC0914;
 }
+
 
 /* .fixed-nav-bar {
     position: fixed;
@@ -84,12 +101,14 @@ header nav ul li a:hover {
 
 
 
-
-
 .canoe {
     width: 100%;
+    margin-bottom: 25px;
 }
 
+.headshot, .project-pic {
+    width: 100%;
+}
 
 
 /* ---  Typography --- */
@@ -109,7 +128,7 @@ h3 {
 
 
 /***** Groups & Items  (Mobile First) *****/
-  
+
 .group {
     display: flex;
     flex-direction: column;
@@ -118,7 +137,10 @@ h3 {
 
 .item {
     flex: 1;
-    margin: 25px;
+    margin-bottom: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .item-double {
@@ -146,6 +168,31 @@ h3 {
         flex-direction: row;
         justify-content: center;
         /* align-content: center; */
+    }
+
+    .item {
+        flex: 1;
+        margin: 25px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+
+    header h1 {
+        font-size: 35px;
+        margin: 15px 0;
+        padding-top: 0;
+    }
+    
+    header nav {
+        margin-top: 8px;
+    }
+
+    header nav ul a {
+        padding: 0 30px 0 0;
     }
 
 }
